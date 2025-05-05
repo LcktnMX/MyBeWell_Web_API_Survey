@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <UserSecretsId>aspnet-Lockton.OperaAPI-9E078C60-CACF-4C13-8E38-1B28591EC93D</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.12" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Refit" Version="6.3.2" />
+    <PackageReference Include="Refit.HttpClientFactory" Version="6.3.2" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>    
+    <ProjectReference Include="..\Lockton.Surveys.DataAccess\Lockton.Surveys.DataAccess.csproj" />
+    <ProjectReference Include="..\Lockton.Surveys.Domain\Lockton.Surveys.Domain.csproj" />
+    <ProjectReference Include="..\Lockton.Surveys.Services\Lockton.Surveys.Services.csproj" />
+    <ProjectReference Include="..\Lockton.Surveys.DataAccess\Lockton.Surveys.DataAccess.csproj" />
+    <ProjectReference Include="..\Lockton.Surveys.Domain\Lockton.Surveys.Domain.csproj" />
+    <ProjectReference Include="..\Lockton.Surveys.Services\Lockton.Surveys.Services.csproj" />
+  </ItemGroup>
+
+</Project>
