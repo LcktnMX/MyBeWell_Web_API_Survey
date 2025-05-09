@@ -140,20 +140,20 @@ namespace Lockton.Surveys.API.Controllers
         }
 
 
-        [HttpGet("Download/{appId}")]
-        public async Task<ActionResult> DownloadApp(Guid appId)
-        {
-            try
-            {
-                var result = await _applicantManager.DownloadPartakerApplication(appId);
+        //[HttpGet("Download/{appId}")]
+        //public async Task<ActionResult> DownloadApp(Guid appId)
+        //{
+        //    try
+        //    {
+        //        var result = await _applicantManager.DownloadPartakerApplication(appId);
 
-                return File(result, "application/zip", $"{appId}.zip");
-            }
-            catch (Exception ex)
-            {
+        //        return File(result, "application/zip", $"{appId}.zip");
+        //    }
+        //    catch (Exception ex)
+        //    {
 
-                return BadRequest(ex.Message);
-            }
-        }
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
     }
 }
