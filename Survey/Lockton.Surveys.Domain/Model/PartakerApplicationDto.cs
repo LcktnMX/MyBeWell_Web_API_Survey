@@ -133,6 +133,7 @@ namespace Lockton.Surveys.Domain.Model
         public DateTime? ClosedAt { get; set; }
         public string Response { get; set; }
         public bool Sent { get; set; }
+        public bool Resend { get; set; }
         public string ReportedAtStr
         {
             get
