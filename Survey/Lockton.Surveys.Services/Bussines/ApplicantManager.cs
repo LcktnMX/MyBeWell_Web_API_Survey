@@ -107,7 +107,8 @@ namespace Lockton.Surveys.Services.Bussines
                     ReportedAt = dto.ReportedAt,
                     ClosedAt = dto.ClosedAt,
                     Response = dto.Response,
-                    Sent = false
+                    Sent = false,
+                    Resend=dto.Resend
 
                 })).Entity;
             }
@@ -120,7 +121,8 @@ namespace Lockton.Surveys.Services.Bussines
                 observationDb.ReportedAt = dto.ReportedAt;
                 observationDb.ClosedAt = dto.ClosedAt;
                 observationDb.Response = dto.Response;
-                observationDb.Sent = false;
+                observationDb.Sent = dto.Sent ?? false;
+                observationDb.Resend = dto.Resend ?? false;
                 _observationRepository.Update(observationDb);
             }
             await _observationRepository.SaveChanges();

@@ -18,5 +18,6 @@ namespace Lockton.Surveys.DataAccess.DBModels.Entities
         public virtual Question IdQuestionNavigation { get; set; }
         public virtual SurveyApplicationContent IdSurveyApplicationContentsNavigation { get; set; }
         public bool? Sent { get; set; }
+        public bool? Resend { get; set; }
     }
 }
