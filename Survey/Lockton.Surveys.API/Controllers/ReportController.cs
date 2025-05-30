@@ -21,6 +21,7 @@ namespace Lockton.Surveys.API.Controllers
     //[Authorize]
     public class ReportController : ControllerBase
     {
+
         public ReportController()
         {
         }
