@@ -101,14 +101,14 @@ namespace Lockton.Surveys.Services.Bussines
                 observationDb = (await _observationRepository.Create(new()
                 {
                     IdQuestion = dto.IdQuestion,
-                    Closed = dto.Closed,
+                    Closed = dto.Closed ?? false,
                     Observation = dto.Observation,
                     IdSurveyApplicationContents = dto.IdSurveyApplicationContents,
                     ReportedAt = dto.ReportedAt,
                     ClosedAt = dto.ClosedAt,
                     Response = dto.Response,
-                    Sent = false,
-                    Resend=dto.Resend
+                    Sent = dto.Sent ?? false,
+                    Resend = dto.Resend ?? false
 
                 })).Entity;
             }
