@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- master
+- Testing
 
 pool:
   vmImage: 'windows-latest'
@@ -31,5 +31,6 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'dist'
+    ArtifactName: 'dist_Suvery_Testing'
     publishLocation: 'Container'
+
